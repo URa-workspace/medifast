@@ -1,0 +1,104 @@
+.appointment-row--contacts {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	gap: 30px;
+}
+
+.appointment-col--contacts {
+	width: calc(33.333% - 10px);
+	min-width: 300px;
+}
+
+.appointment-col--contacts.appointment-col--form {
+	padding: 40px 30px;
+	border-radius: 20px;
+	border: 1px solid var(--theme-color);
+}
+
+.contacts-block .space {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.schedule-box--contacts {
+	align-self: auto;
+}
+
+.schedule-box {
+	height: 100%;
+}
+
+.schedule-box .box-title {
+	margin-bottom: 30px;
+}
+
+.schedule-box .box-timing {
+	font-size: 18px;
+}
+
+.schedule-box--contacts p i {
+	line-height: 28px;
+	margin-right: 10px;
+}
+
+.schedule-box--contacts p a {
+	width: 100%;
+	text-align: left;
+}
+
+.schedule-box--contacts::after {
+	background-color: var(--theme-color);
+}
+
+
+.contacts-block .form-wrap {
+	padding: 0;
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.contacts-block .box-timing {
+	/* min-width: 300px; */
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	line-height: 1.2;
+	margin-bottom: 0;
+	padding: 16px 0;
+}
+
+/* @media (max-width:1200px) {
+	.appointment-row--contacts {}
+} */
+
+@media (max-width:1200px) {
+	.appointment-row--contacts {
+		max-width: 680px;
+		margin: 0 auto;
+		flex-wrap: wrap;
+		row-gap: 60px;
+		column-gap: 20px;
+	}
+	
+	.appointment-row--contacts .appointment-col--contacts:nth-child(1),
+	.appointment-row--contacts .appointment-col--contacts:nth-child(2) {
+		width: calc(50% - 10px);
+	}
+
+	.appointment-row--contacts .appointment-col--contacts:nth-child(3) {
+		width: 100%;
+	}
+}
+
+@media (max-width:768px) {
+	.appointment-row--contacts {
+		max-width: 360px;
+		row-gap: 40px;
+	}
+	
+	.appointment-row--contacts .appointment-col--contacts:nth-child(1),
+	.appointment-row--contacts .appointment-col--contacts:nth-child(2) {
+		width: 100%;
+	}
+}
